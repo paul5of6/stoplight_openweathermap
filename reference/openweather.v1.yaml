@@ -25,6 +25,22 @@ paths:
       operationId: get-weather
       description: |
         Access current weather data for any location on Earth including over 200,000 cities! Current weather is frequently updated based on global models and data from more than 40,000 weather stations.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: zip
+          description: '**Zip Code** *Example: 76016*'
+        - schema:
+            type: string
+          in: query
+          name: units
+          description: '**Units** *Example: Imperial, standard, or metric*'
+        - schema:
+            type: string
+          in: query
+          name: q
+          description: '**City Name** *Example: Arlington*'
 components:
   schemas: {}
   securitySchemes:
