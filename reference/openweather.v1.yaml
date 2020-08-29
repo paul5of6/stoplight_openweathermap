@@ -18,22 +18,13 @@ paths:
   /weather:
     get:
       summary: Your GET endpoint
-      tags:
-        - get
+      tags: []
       responses:
         '200':
           description: OK
-          headers:
-            header-0:
-              schema:
-                type: string
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
       operationId: get-weather
-      description: 'getting the weather  '
+      description: |
+        Access current weather data for any location on Earth including over 200,000 cities! Current weather is frequently updated based on global models and data from more than 40,000 weather stations.
 components:
   schemas: {}
   securitySchemes:
