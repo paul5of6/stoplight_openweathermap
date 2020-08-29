@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: openweather
+  version: '1.0'
+  description: a less than fine api
+  contact:
+    name: Support
+    url: 'https://openweathermap.org/api'
+    email: some_email@gmail.com
+  termsOfService: 'https://openweathermap.org/terms'
+  license:
+    name: CC Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
+    url: 'https://openweathermap.org/price'
+servers:
+  - url: 'http://api.openweathermap.org/data/2.5'
+    description: prod
+paths:
+  /weather:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - get
+      responses:
+        '200':
+          description: OK
+          headers:
+            header-0:
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: get-weather
+      description: 'getting the weather  '
+components:
+  schemas: {}
+  securitySchemes:
+    app_id:
+      name: appid
+      type: apiKey
+      in: query
+tags:
+  - name: get
